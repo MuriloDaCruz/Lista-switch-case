@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    //PROBLEMA: Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+    const tell = prompt('Telefonou para a vítima? Responda com "Sim" ou "Não"').toLowerCase();
+    const local = prompt('Esteve no local do crime? Responda com "Sim" ou "Não"').toLowerCase();
+    const mora = prompt('Mora perto da vítima? Responda com "Sim" ou "Não"').toLowerCase();
+    const deve = prompt('Devia para a vítima? Responda com "Sim" ou "Não"').toLowerCase();
+    const job = prompt('Já trabalhou com a vítima? Responda com "Sim" ou "Não"').toLowerCase();
+    //PROCESSAMENTO
+    let classificacao = 0
+    switch (tell) {
+        case "sim":
+            classificacao++
+            break;
+    }
+    switch (local) {
+        case "sim":
+            classificacao++
+            break;
+    }
+    switch (mora) {
+        case "sim":
+            classificacao++
+            break;
+    }
+    switch (deve) {
+        case "sim":
+            classificacao++
+            break;
+    }
+    switch (job) {
+        case "sim":
+            classificacao++
+            break;
+    }
+    switch (classificacao) {
+        case 5:
+            alert(`Você é um Assasino!`);
+            break;
+        case 3:
+        case 4:
+            alert(`Você é cúmplice.`);
+            break;
+        case 2:
+            alert(`Você é suspeito.`);
+            break;
+        case 0:
+        case 1:
+            alert('Você está livre.')
+            break;
+    }
+
+    //SAÍDA
+
+</script>
